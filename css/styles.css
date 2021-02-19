@@ -68,3 +68,14 @@ header a:hover {
 nav details summary {
   font-weight: bold;
 }
+
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  background: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url(/img/pattern.png);
+  background-size: 6.6%;
+  height: 350px;
+  width: 1366px;
+}
