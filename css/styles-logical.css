@@ -1,32 +1,33 @@
 @font-face {
   font-family: charter;
-  src: url('../fonts/charter-regular.otf');
+  src: url("../fonts/charter-regular.otf");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: charter-italic;
-  src: url('../fonts/charter-italic.otf');
+  src: url("../fonts/charter-italic.otf");
   font-style: italic;
   font-weight: 400;
 }
 
 @font-face {
   font-family: charter-bold;
-  src: url('../fonts/charter-bold.otf');
+  src: url("../fonts/charter-bold.otf");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: charter-bold-italic;
-  src: url('../fonts/charter-bold-italic.otf');
+  src: url("../fonts/charter-bold-italic.otf");
   font-style: italic;
   font-weight: bold;
 }
 
 :root {
+  --gray40: #424242;
   --gray30: #212121;
   --gray20: #212429;
   --gray10: #616161;
@@ -34,7 +35,7 @@
 
 body {
   color: var(--gray);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -70,12 +71,37 @@ nav details summary {
 }
 
 pre {
-  background: #FEC62E;
+  background: #fec62e;
 }
 
 .hero {
-  background: linear-gradient(3.36deg, #212325 -63.62%, rgba(255, 255, 255, 0) 43.49%), url(/img/pattern.png);
+  background: linear-gradient(
+      3.36deg,
+      #212325 -63.62%,
+      rgba(255, 255, 255, 0) 43.49%
+    ),
+    url(/img/pattern.png);
   background-size: 6.6%;
   height: 350px;
   width: 1366px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+}
+
+.section-content h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  display: inline-block;
+  background: var(--gray40);
 }
