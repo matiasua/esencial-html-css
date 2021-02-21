@@ -51,9 +51,9 @@ h1 {
   margin-right: 52px; */
 }
 
-h1 ~ p {
+/* h1 ~ p {
   margin-bottom: 64px;
-}
+} */
 
 hr {
   margin: 64px 0;
@@ -92,10 +92,26 @@ nav details summary {
 
 pre {
   background: #fec62e;
+  padding: 40px;
+  font-family: "Roboto";
+  line-height: 24px;
 }
 
 blockquote {
   margin: 32px 0;
+  padding-left: 16px;
+  font-size: 24px;
+  font-family: "Roboto";
+  line-height: 32px;
+  color: var(--gray40);
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+
+blockquote span p::before {
+  content: "- ";
 }
 
 .hero {
@@ -140,6 +156,7 @@ blockquote {
 
 .section-content h3 {
   counter-increment: titleList;
+  margin-bottom: 4px;
 }
 
 .section-content h3::before {
