@@ -6,43 +6,212 @@
 }
 
 @font-face {
-  font-family: charter-italic;
+  font-family: charter;
   src: url("../fonts/charter-italic.otf");
   font-style: italic;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: charter-bold;
+  font-family: charter;
   src: url("../fonts/charter-bold.otf");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  font-family: charter-bold-italic;
+  font-family: charter;
   src: url("../fonts/charter-bold-italic.otf");
   font-style: italic;
   font-weight: bold;
 }
 
 :root {
-  --gray40: #424242;
+  font-size: 16px;
   --gray30: #212121;
   --gray20: #212429;
   --gray10: #616161;
 }
 
-.main {
-  background: purple;
+.p-content {
+  margin-top: 35px;
+  /* border: solid 1px red; */
 }
 
-.title {
-  background: red;
+.content-header {
+  width: 78px;
+  height: 24px;
+  font-size: 14px;
 }
 
-.pricing {
-  background: blue;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--gray30);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  line-height: 24px;
+  /* font-family: charter; */
+}
+
+a {
+  color: var(--gray30);
+}
+
+header {
+  /* --gray10: red; */
+  font-size: 14px;
+  width: 188px;
+  color: var(--gray10);
+  position: absolute;
+  /* right: 0; */
+  /* bottom: 0; */
+  top: 64px;
+  left: -232px;
+  /* top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  /* margin: 50px; */
+  /* top left bottom right z-index */
+  /* top: 200px; */
+  /* left: 30px; */
+  /* right: 50px;
+  bottom: 100px; */
+  z-index: 1;
+  /* position: absolute;
+  position: fixed;
+  position: sticky; */
+}
+
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--gray30);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+header li {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 60px;
+  /* text-decoration: underline; */
+  /* font-size: 3.75em; */
+  margin-top: 64px;
+  margin-bottom: 16px;
+  font-weight: normal;
+  /* margin-left: 20px;
+  margin-right: 10px; */
+  /* margin: top right bottom left; */
+  /* margin: 64px 10px 16px 20px;
+  margin: 10px 5px;
+  margin: 30px 20px 10px; */
+  /* border: 1px solid red; */
+}
+
+/* h1 + p {
+  margin-bottom: 64px;
+} */
+
+hr {
+  margin: 64px 0;
+  /* background: red; */
+}
+
+h2 {
+  font-size: 2em;
+  margin: 64px 0 0px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  /* position: sticky; */
+  top: 0;
+  background: white;
+}
+
+pre {
+  background: #fec62e;
+  padding: 40px;
+  /* padding-left: 40px; */
+  font-family: "Roboto";
+  line-height: 24px;
+}
+
+blockquote {
+  font-size: 24px;
+  margin: 32px 0 0px;
+  padding-left: 16px;
+  line-height: 24px;
+  /* border: 10px solid red; */
+  /* border-top: 1px solid pink; */
+  /* border-top-color: aqua; */
+  /* border-top-style: dashed; */
+  /* border-radius: 50px 100px 10px 0; */
+  border-left: 4px solid var(--gray30);
+}
+
+#init {
+  margin-bottom: 16px;
+}
+
+blockquote span {
+  color: var(--gray10);
+  font-size: 24px;
+}
+blockquote span::before {
+  content: "-";
+}
+
+#etiquetas {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+#dom {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+#semantica {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+#atributos {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+#css {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+pre p {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+.header-content {
+  position: relative;
 }
 
 .wrapper {
@@ -51,90 +220,17 @@
 }
 
 .main-content {
+  /* background: blue; */
+  /* padding: 20px; */
   background: white;
-  padding: 20px;
 }
 
-body {
-  color: var(--gray);
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-}
-
-a {
-  color: var(--gray);
-}
-
-h1 {
-  font-size: 60px;
-  margin-top: 64px;
-  margin-bottom: 16px;
-  /* margin-left: 348px;
-  margin-right: 52px; */
-}
-
-/* h1 ~ p {
-  margin-bottom: 64px;
-} */
-
-hr {
-  margin: 64px 0;
-}
-
-h2 {
-  font-size: 2em;
-  margin: 40px 0;
-  font-weight: normal;
-  margin-top: 64px;
-  margin-bottom: 40px;
-}
-
-h3 {
-  font-size: 1.5em;
-  margin-top: 16px;
-  margin-bottom: 24px;
-  font-weight: normal;
-}
-header a {
-  /* --gray10: red; 
-  Puedo cambiar el valor de este Custom Propiety solo en el header a rojo (en este ejemplo) 
-  y en el resto de elementos sigue teniendo el color anterior*/
-  font-size: 14px;
-  color: var(--gray10);
-  text-decoration: none;
-}
-
-header a:hover {
-  color: var(--gray);
-}
-
-nav details summary {
-  font-weight: bold;
-}
-
-pre {
-  background: #fec62e;
-  padding: 40px;
-  font-family: "Roboto";
-  line-height: 24px;
-}
-
-blockquote {
-  margin: 32px 0;
-  padding-left: 16px;
-  font-size: 24px;
-  font-family: "Roboto";
-  line-height: 24px;
-  color: var(--gray40);
-  border-left: 4px solid var(--gray30);
-}
-
-blockquote span {
-  color: var(--gray10);
-}
-
-blockquote span p::before {
-  content: "- ";
+.debug {
+  box-shadow: inset 0 0 0 1px red;
+  outline: 1px solid red;
+  background: red;
+  /* border: 1px solid red !important;
+  box-sizing: border-box; */
 }
 
 .hero {
@@ -150,27 +246,59 @@ blockquote span p::before {
   height: 350px;
 }
 
-.section-content {
-  margin-top: 164px;
+.section-content-model {
+  position: relative;
 }
 
-.section-content:first-of-type {
-  margin: 0;
-}
-.section-content ol li {
-  line-height: 24px;
-}
-
-.section-content ul li {
+.section-content-model ul li {
   margin-bottom: 16px;
 }
 
+.section-content-model h2 {
+  margin-top: 156px;
+}
+
+.section-content-model h3 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.section-content-model ol li {
+  line-height: 24px;
+}
+
+.section-content {
+  /* margin-top: 164px; */
+  position: relative;
+}
+.section-content:first-of-type {
+  margin: 0;
+}
+
+.section-content ol li {
+  line-height: 24px;
+}
+.section-content ul li {
+  margin-bottom: 16px;
+}
 .section-content + hr {
   display: none;
 }
 
 .section-content img {
-  margin-top: 40px;
+  /* margin-top: 20px; */
+}
+
+.section-content p {
+  /* margin-bottom: 40px; */
+}
+
+#p-github {
+  margin-bottom: 32px;
+}
+
+.section-content h2 {
+  margin-bottom: 40px;
 }
 
 .section-content {
@@ -179,17 +307,123 @@ blockquote span p::before {
 
 .section-content h3 {
   counter-increment: titleList;
-  margin-bottom: 4px;
+  /* background: red; */
+  padding-bottom: 8px;
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .section-content h3::before {
   content: counter(titleList, decimal) ". ";
 }
 
-.section-content h3::after {
+#google-chrome::after {
   content: "";
-  width: 80px;
+  width: 192px;
   height: 4px;
+  background: var(--gray30);
   display: inline-block;
-  background: var(--gray40);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#vsc::after {
+  content: "";
+  width: 228px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#figma::after {
+  content: "";
+  width: 93px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#github::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#html::after {
+  content: "";
+  width: 171px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#etiquetas::after {
+  content: "";
+  width: 126px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#dom::after {
+  content: "";
+  width: 79px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#semantica::after {
+  content: "";
+  width: 140px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#atributos::after {
+  content: "";
+  width: 124px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#css::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
