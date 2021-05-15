@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: charter;
   src: url("../fonts/charter-regular.otf");
   font-style: normal;
@@ -24,46 +24,67 @@
   src: url("../fonts/charter-bold-italic.otf");
   font-style: italic;
   font-weight: bold;
-}
+} */
 
 :root {
-  --gray40: #424242;
-  --gray30: #212121;
-  --gray20: #212429;
-  --gray10: #616161;
+  --white: white;
+  --white30: #3a3539;
+  --white20: #a5a3a5;
+  --white10: white;
 }
 
 body {
-  color: var(--gray);
-  font-family: "Roboto", sans-serif;
+  color: var(--white10);
+  font-family: "Nunito", sans-serif;
+  background: #251f24;
+  margin: 0;
 }
 
 a {
-  color: var(--gray);
+  color: var(--white);
+}
+
+hr {
+  margin-block: 40px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
 }
 
 h1 {
   font-size: 60px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
 }
 
 h2 {
   font-size: 2em;
+  margin-block: 40px;
 }
 
 h3 {
   font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
 }
+
+header {
+  font-size: 14px;
+  color: var(--white);
+}
+
+header li {
+  color: var(--white20);
+}
+
 header a {
-  /* --gray10: red; 
+  /* --white10: red; 
   Puedo cambiar el valor de este Custom Propiety solo en el header a rojo (en este ejemplo) 
   y en el resto de elementos sigue teniendo el color anterior*/
-  font-size: 14px;
-  color: var(--gray10);
+  color: var(--white20);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray);
+  color: var(--white30);
 }
 
 nav details summary {
@@ -71,23 +92,44 @@ nav details summary {
 }
 
 pre {
-  background: #fec62e;
+  background: var(--white30);
+}
+
+p {
+  color: var(--white20);
+}
+
+blockquote {
+  margin-block-start: 80px;
+  margin-inline-end: 63px;
+  background-color: var(--white30);
+  border-radius: 8px;
+}
+
+.main hr {
+  display: none;
 }
 
 .hero {
-  background: linear-gradient(
+  /* background: linear-gradient(
       3.36deg,
       #212325 -63.62%,
       rgba(255, 255, 255, 0) 43.49%
     ),
-    url(/img/pattern.png);
-  background-size: 6.6%;
+    url(/img/pattern.png); */
+  background-image: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
+  /* background-size: 6.6%; */
   height: 350px;
-  width: 1366px;
+  /* width: 1366px; */
 }
 
 .section-content {
   counter-reset: titleList;
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
 }
 
 .section-content h3 {
@@ -103,5 +145,5 @@ pre {
   width: 80px;
   height: 4px;
   display: inline-block;
-  background: var(--gray40);
+  background: var(--white10);
 }
