@@ -58,26 +58,52 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 40px;
   margin-block: 40px;
   font-weight: 700;
-  line-height: 54, 56px;
+  line-height: 54px;
   /* font-style: normal; */
 }
 
 h3 {
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 32px;
   margin-block: 16px;
+  line-height: 43px;
+}
+
+.header {
+  position: sticky;
+  inset-block-start: -45px;
+}
+
+.header-content {
+  position: relative;
+  inset-block-start: 45px;
 }
 
 header {
   font-size: 14px;
   color: var(--white);
+  position: absolute;
+  /* top: ; */
+  inset-block-start: 0;
+  /* bottom:  */
+  /* inset-block-end: ; */
+  /* left: ; */
+  inset-inline-start: -208px;
+  /* right: ; */
+  /* inset-inline-end: ; */
+  inline-size: 188px;
+}
+
+header h3 {
+  font-size: 14px;
 }
 
 header li {
   color: var(--white20);
+  margin-block-end: 16px;
 }
 
 header a {
@@ -190,6 +216,30 @@ blockquote p {
 .section-content-concept img {
   display: block;
   max-inline-size: 100%;
+}
+
+.section-content-model {
+  margin-block-start: 122px;
+}
+
+.section-content-model h3 {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+}
+
+.section-content-model ul li {
+  line-height: 24px;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+}
+
+.section-content-model ol {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.section-content-model li {
+  color: var(--white20);
 }
 
 /* .section-content h3::after {
